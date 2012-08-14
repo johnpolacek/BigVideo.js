@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>BigVideo.js - The jQuery Plugin for Big Background Video</title>
+    <meta name="description" content="BigVideo.js - The jQuery Plugin for Big Background Video" />
+    <meta name="author" content="John Polacek" />
+    <meta name="viewport" content="width=device-width">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:900&text=ABCDEFGHIJKLMNOPQRSTUVWXYZ' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="_/css/style.css">
+    <link rel="stylesheet" href="_/css/bigvideo.css">
+</head>
+<body>
+    <div class="main">
+        <div id="overview" class="box">
+            <h1>BigVideo<span class="dimmed"><small>.</small>js</span></h1>
+            <h2>Random Ambient Loop Example</h2>
+        </div>
+    </div>
+
+    <!-- BigVideo Dependencies -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  	<script>window.jQuery || document.write('<script src="_/js/jquery-1.7.2.min.js"><\/script>')</script>
+    <script src="_/js/jquery-ui-1.8.22.custom.min.js"></script>
+    <script src="_/js/jquery.imagesloaded.min.js"></script>
+    <script src="http://vjs.zencdn.net/c/video.js"></script>
+
+    <!-- BigVideo -->
+    <script src="bigvideo.js"></script>
+
+    <!-- Demo -->
+    <script>
+	    $(function() {
+            var BV = new $.BigVideo();
+            var vids = [
+                'http://player.vimeo.com/external/47395324.sd.mp4?s=dbad73730de8f18d1cee7c8452e99271',
+                'http://player.vimeo.com/external/47395196.sd.mp4?s=27e5fca4bb23eb8f20964161ad79c38a',
+                'http://player.vimeo.com/external/47395197.sd.mp4?s=b6a94437c655d572fc80fa86e551d3e6'
+            ];
+            vids.sort(function() { return 0.5 - Math.random() }); // random order on load
+			BV.init();
+			BV.show(vids,{ambient:true});
+	    });
+    </script>
+</body>
+</html>

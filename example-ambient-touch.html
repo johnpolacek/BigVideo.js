@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>BigVideo.js - The jQuery Plugin for Big Background Video</title>
+    <meta name="description" content="BigVideo.js - The jQuery Plugin for Big Background Video" />
+    <meta name="author" content="John Polacek" />
+    <meta name="viewport" content="width=device-width">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:900&text=ABCDEFGHIJKLMNOPQRSTUVWXYZ' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="_/css/style.css">
+    <link rel="stylesheet" href="_/css/bigvideo.css">
+    <script src="_/js/modernizr-2.5.3.min.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div id="overview" class="box">
+            <h1>BigVideo<span class="dimmed"><small>.</small>js</span></h1>
+            <h2>Ambient Video Example</h2>
+            <p>In this example, we are showing a fullscreen background image instead of video for touchscreen devices. Another trick you can do is to use the forceAutoplay setting, which will start playing a video as soon as a user clicks anywhere on the page (videos will only play on touchscreen devices attached to a user click event)</p>
+
+        </div>
+    </div>
+
+    <!-- BigVideo Dependencies -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  	<script>window.jQuery || document.write('<script src="_/js/jquery-1.7.2.min.js"><\/script>')</script>
+    <script src="_/js/jquery-ui-1.8.22.custom.min.js"></script>
+    <script src="_/js/jquery.imagesloaded.min.js"></script>
+    <script src="http://vjs.zencdn.net/c/video.js"></script>
+
+    <!-- BigVideo -->
+    <script src="bigvideo.js"></script>
+
+    <!-- Demo -->
+    <script>
+	    $(function() {
+            var BV = new $.BigVideo();
+			BV.init();
+            if (Modernizr.touch) {
+                BV.show('_/img/background-dock.jpg');
+            } else {
+                BV.show('http://player.vimeo.com/external/47395197.sd.mp4?s=b6a94437c655d572fc80fa86e551d3e6',{ambient:true});
+            }
+	    });
+    </script>
+</body>
+</html>

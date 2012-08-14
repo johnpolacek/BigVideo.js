@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>BigVideo.js - The jQuery Plugin for Big Background Video</title>
+    <meta name="description" content="BigVideo.js - The jQuery Plugin for Big Background Video" />
+    <meta name="author" content="John Polacek" />
+    <meta name="viewport" content="width=device-width">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:900&text=ABCDEFGHIJKLMNOPQRSTUVWXYZ' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="_/css/style.css">
+    <link rel="stylesheet" href="_/css/bigvideo.css">
+</head>
+<body>
+
+    <div class="nav box" id="nav">
+        <a href="#overview" class="nav-link">Overview</a>
+        <a href="#setup" class="nav-link">Setup</a>
+        <a href="#ambient" class="nav-link">Ambient Video</a>
+        <a href="#playlists" class="nav-link">Playlists</a>
+    </div>
+
+    <div class="main">
+        
+
+        <div id="overview" class="box">
+    		<h1>BigVideo<span class="dimmed"><small>.</small>js</span></h1>
+    		<h2>The jQuery Plugin for Big Background Video (and Images)</h2>
+            <div class="credit">
+                <h3>Created by John Polacek</h3>
+                <a href="https://twitter.com/johnpolacek" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @johnpolacek</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+            <p>This plugin is designed to make it easier to add background video to a website that fits to fill the browser window. It can play silent ambient background video (or series of videos). Or you can use it as a player to show a playlist of videos. BigVideo.js can also show big background images, which is nice to have for showing big background images for devices that don&rsquo;t have autoplay for ambient video.</p>
+        </div>
+
+
+        <div id="setup" class="box">
+            <h2>Setup</h2>
+            <p>BigVideo.js is built on the Video.js api. It also requires jQuery, jQuery UI (for the slider control) and the <a href="https://github.com/desandro/imagesloaded" target="_blank">jQuery imagesloaded</a> plugin. Make sure you include all these libraries when using BigVideo.js.</p>
+            <p>To simply play a video that takes up the entire browser window (like in <a href="example-simple.html" target="_blank">this example</a>), do this:</p>
+            <p><blockquote><pre>
+$(function() {
+    var BV = new $.BigVideo();
+    BV.init();
+    BV.show('http://video-js.zencoder.com/oceans-clip.mp4');
+});</pre></blockquote></p>
+        </div>
+
+
+        <div id="ambient" class="box">
+            <h2>Ambient Video</h2>
+            <p>To play silent video in the background of a page (like in <a href="example-ambient.html" target="_blank">this example</a>), use BigVideo&rsquo;s ambient setting:</p>
+            <p><blockquote><pre>
+$(function() {
+    var BV = new $.BigVideo();
+    BV.init();
+    BV.show('http://video-js.zencoder.com/oceans-clip.mp4',{ambient:true});
+});</pre></blockquote></p>
+            <p>Or play a series of ambient background videos (like in <a href="example-ambient-loop.html" target="_blank">this example</a>)</p>
+            <p><blockquote><pre>
+$(function() {
+    var BV = new $.BigVideo();
+    BV.init();
+    BV.show(['vid1.mp4','vid2.mp4','vid3.mp4'],{ambient:true});
+});</pre></blockquote></p>
+            <p>Keep in mind that mobile devices do not allow video autoplay. To account for this, use <a href="http://modernizr.com" target="_blank">Modernizr</a> to detect for touchscreen devices, then send a large poster image for BigVideo to use instead.</p>
+            <p><blockquote><pre>
+var BV = new $.BigVideo();
+BV.init();
+if (Modernizr.touch) {
+    BV.show('video-poster.jpg');
+} else {
+    BV.show('video.mp4',{ambient:true});
+}</pre></blockquote></p>
+        </div>
+        
+
+        <div id="playlists" class="box">
+            <h2>Playlists</h2>
+            <p>You can create a playlist like this:</p>
+            <div class="playlist">
+                <a href="http://player.vimeo.com/external/47395324.sd.mp4?s=dbad73730de8f18d1cee7c8452e99271" class="playlist-btn">Video #1</a>
+                <a href="http://player.vimeo.com/external/47395196.sd.mp4?s=27e5fca4bb23eb8f20964161ad79c38a" class="playlist-btn">Video #2</a>
+                <a href="http://player.vimeo.com/external/47395197.sd.mp4?s=b6a94437c655d572fc80fa86e551d3e6" class="playlist-btn">Video #3</a>
+            </div>
+            <p>For more on how to do this, including auto-hiding content and alternate fullscreen image content for touchscreen devices, take a look at <a href="example-playlist.html">this example</a>.
+            <p><small>Playlist clips courtesy of <a href="http://beachfrontprod.blogspot.com/" target="_blank">Beachfront B-Roll</a></small></p>
+        </div>
+
+    </div>
+
+	<!-- BigVideo Dependencies -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  	<script>window.jQuery || document.write('<script src="_/js/jquery-1.7.2.min.js"><\/script>')</script>
+    <script src="_/js/jquery-ui-1.8.22.custom.min.js"></script>
+    <script src="_/js/jquery.imagesloaded.min.js"></script>
+    <script src="http://vjs.zencdn.net/c/video.js"></script>
+
+    <!-- BigVideo -->
+    <script src="bigvideo.js"></script>
+    
+    <!-- Demo -->
+    <script src="_/js/jquery.scrollTo.js"></script>
+    <script>
+        var BV;
+	    $(function() {
+            
+            // initialize BigVideo
+            BV = new $.BigVideo();
+			BV.init();
+			BV.show('http://video-js.zencoder.com/oceans-clip.mp4',{ambient:true});
+
+            // Playlist button click starts video
+            $('.playlist-btn').on('click', function(e) {
+                e.preventDefault();
+                BV.show($(this).attr('href'));
+            })
+
+            // set up navigation
+            $('.nav-link').on('click',function(e){
+                e.preventDefault();
+                scrollToSection($(this).attr('href'));
+            })
+            function scrollToSection(id) {
+                $(window)._scrollable().stop();
+                $(window).scrollTo(id, {
+                    duration: 300,
+                    offset: -50,
+                    // easeInOutQuad
+                    easing: function(x,t,b,c,d){if((t/=d/2)<1) return c/2*t*t+b;return -c/2*((--t)*(t-2)-1)+b;}
+                });
+            }
+	    });
+    </script>
+</body>
+</html>
