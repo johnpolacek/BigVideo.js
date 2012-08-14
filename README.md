@@ -1,6 +1,6 @@
 # BigVideo.js
 ## The jQuery Plugin for Big Background Video (and Images)
-### Created by John Polacek (follow [@johnpolacek](https://twitter.com/johnpolacek)) at Draftfcb Chicago
+### Created by John Polacek <small>(follow [@johnpolacek](https://twitter.com/johnpolacek))</small> at Draftfcb Chicago
 Find out everything you need to know about how to use this plugin on its demo page at <http://dfcb.github.com/BigVideo.js>.
 
 * * *
