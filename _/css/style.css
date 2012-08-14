@@ -81,3 +81,9 @@ pre {
 	border-radius:5px; 
 }
 .dimmed {opacity:.7;}
+.footer-text {
+	padding: 0 20px;
+	font-size: .9em;
+	font-style: italic;
+	opacity: .8;
+}
