@@ -37,10 +37,8 @@
             </div>
             <p>This plugin is designed to make it easier to add background video to a website that fits to fill the browser window. It can play silent ambient background video (or series of videos). Or you can use it as a player to show a playlist of videos. BigVideo.js can also show big background images, which is nice to have for showing big background images for devices that don&rsquo;t have autoplay for ambient video.</p>
             <p>BigVideo.js uses the <a href="http://videojs.com" target="_blank">Video.js</a> API from <a href="http://zencoder.com" target="_blank">zencoder</a>. So big thanks to them!</p>
-            <p id="download">
-                DOWNLOAD<br /> 
-                <a class="download" href="https://github.com/dfcb/BigVideo.js/zipball/master">zip</a>
-                <a class="download" href="https://github.com/dfcb/BigVideo.js/tarball/master">tar</a>
+            <p class="download-links">
+                <strong>DOWNLOAD:</strong> <a class="download" href="https://github.com/dfcb/BigVideo.js/zipball/master">zip</a> <a class="download" href="https://github.com/dfcb/BigVideo.js/tarball/master">tar</a>
             </p>
         </div>
 
@@ -144,6 +142,22 @@ if (Modernizr.touch) {
                 });
             }
 	    });
+    </script>
+
+    <!-- 
+        BigVideo.js Analytics to see how many people are visiting our project page.
+        Do not use this code on your site unless you want to show up on our Google Analytics account :)
+     -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34145020-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
     </script>
 </body>
 </html>
