@@ -8,9 +8,9 @@
     <meta name="author" content="John Polacek" />
     <meta name="viewport" content="width=device-width">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:900&text=ABCDEFGHIJKLMNOPQRSTUVWXYZ' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="_/css/style.css">
-    <link rel="stylesheet" href="_/css/bigvideo.css">
-    <script src="_/js/modernizr-2.5.3.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bigvideo.css">
+    <script src="js/modernizr-2.5.3.min.js"></script>
 </head>
 <body>
     <div class="main">
@@ -24,9 +24,9 @@
 
     <!-- BigVideo Dependencies -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  	<script>window.jQuery || document.write('<script src="_/js/jquery-1.7.2.min.js"><\/script>')</script>
-    <script src="_/js/jquery-ui-1.8.22.custom.min.js"></script>
-    <script src="_/js/jquery.imagesloaded.min.js"></script>
+  	<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+    <script src="js/jquery-ui-1.8.22.custom.min.js"></script>
+    <script src="js/jquery.imagesloaded.min.js"></script>
     <script src="http://vjs.zencdn.net/c/video.js"></script>
 
     <!-- BigVideo -->
@@ -38,7 +38,7 @@
             var BV = new $.BigVideo();
 			BV.init();
             if (Modernizr.touch) {
-                BV.show('_/img/background-dock.jpg');
+                BV.show('img/background-dock.jpg');
             } else {
                 BV.show('http://player.vimeo.com/external/47395197.sd.mp4?s=b6a94437c655d572fc80fa86e551d3e6',{ambient:true});
             }
