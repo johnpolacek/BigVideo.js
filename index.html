@@ -22,6 +22,7 @@
         <a href="#setup" class="nav-link">Setup</a>
         <a href="#ambient" class="nav-link">Ambient Video</a>
         <a href="#playlists" class="nav-link">Playlists</a>
+        <a href="#videojs" class="nav-link">Video.js</a>
         <a href="#tips" class="nav-link">Tips</a>
         
         <div class="toggle-btn">
@@ -99,6 +100,13 @@ if (Modernizr.touch) {
             </div>
             <p>For more on how to do this, including auto-hiding content and alternate fullscreen image content for touchscreen devices, take a look at <a href="example-playlist.html">this example</a>.
             <p><small>Playlist clips courtesy of <a href="http://beachfrontprod.blogspot.com/" target="_blank">Beachfront B-Roll</a></small></p>
+        </div>
+
+        <div id="videojs" class="box">
+            <h2>Video.js</h2>
+            <p>Because BigVideo.js is built on top of <a href="http://videojs.com" target="_blank">Video.js</a>, you can use the <a href="http://videojs.com/docs/api/" target="_blank">Video.js api</a>. Access the Video.js player with the getPlayer() method.</p>
+            <p><blockquote><pre>
+BV.getPlayer().pause();</pre></blockquote></p>            
         </div>
 
         <div id="tips" class="box">
