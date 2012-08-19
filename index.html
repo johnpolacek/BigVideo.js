@@ -139,6 +139,12 @@ if (Modernizr.touch) {
                 BV.show($(this).attr('href'));
             })
 
+            // Video Play/Pause toggle
+            $('#video-toggle').on('click', function(e) {
+                if (this.checked)   BV.getPlayer().play();
+                else                BV.getPlayer().pause();
+            })
+
             // set up navigation
             $('.nav-link').on('click',function(e){
                 e.preventDefault();
