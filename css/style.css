@@ -67,6 +67,18 @@ pre {
 	text-decoration:none;
 	font-style:normal;
 }
+.toggle-btn {
+	position: absolute;
+	bottom: -50px;
+	left: 5px;
+	background:rgba(0,0,0,.6);
+	padding: 6px 12px;
+	border-radius: 10px;
+	color: #fff;
+	font-size: .8em;
+	font-family:'Source Sans Pro', sans-serif; font-weight:900; 
+	text-transform: uppercase;
+}
 .playlist { 
 	padding:0; 
 	margin:20px 20px 40px;

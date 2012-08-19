@@ -281,6 +281,11 @@
 				isQueued = true;
 			}
         };
+
+        // Expose Video.js player
+        BigVideo.getPlayer = function() {
+			return player;
+        };
     };
 
 })(jQuery);
