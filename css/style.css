@@ -10,8 +10,8 @@ h1, h2, .nav-link, .playlist-btn {
 	text-transform:uppercase;
 }
 h1 {font-size:48px; }
-h1, h2, h3, p { margin:0 0 10px; color:#fff;}
-p { line-height:1.4; }
+h1, h2, h3, p { margin:0 0 10px; color:#fff; text-shadow: 1px 1px 1px #000;}
+p { line-height:1.4;  }
 a { color:#fff; font-style:italic; }
 blockquote { 
 	background:#fff; 
@@ -71,7 +71,7 @@ pre {
 	position: absolute;
 	bottom: -50px;
 	left: 5px;
-	background:rgba(0,0,0,.6);
+	background:rgba(0,0,0,.8);
 	padding: 6px 12px;
 	border-radius: 10px;
 	color: #fff;
@@ -100,5 +100,5 @@ pre {
 	font-size:.9em;
 	font-style:italic;
 	opacity:.8;
-	text-shadow: 1px 1px 1px rgba(0,0,0,.75);
+	text-shadow: 1px 1px 1px rgba(0,0,0,.8);
 }
