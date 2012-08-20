@@ -5,4 +5,4 @@ Find out everything you need to know about how to use this plugin on its demo pa
 
 * * *
 ### Draftfcb Chicago
-We are the development group at Draftfcb Chicago. If you want to work on big digital ideas for big brands, get in touch with us on our [jobs page](http://recruiting.draftfcb.net).
+We are the development group at Draftfcb Chicago. If you want to work on big digital ideas for big brands, get in touch with us on our [devrecruiting@draftfcb.com](mailto:devrecruiting@draftfcb.com).
