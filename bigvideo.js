@@ -41,9 +41,12 @@
         BigVideo.settings = $.extend({}, defaults, options);
 
         // If only using mp4s and browser is firefox, use flash fallback
-        if (BigVideo.settings.useFlashForFirefox && (navigator.userAgent.toLowerCase().indexOf('firefox') != -1)) {
+        var ua = navigator.userAgent.toLowerCase();
+        var isFirefox = ua.indexOf('firefox') != -1;
+        if (BigVideo.settings.useFlashForFirefox && (isFirefox)) {
 			VideoJS.options.techOrder = ['flash'];
 		}
+
 
 		function updateSize() {
 			var windowW = $(window).width();
