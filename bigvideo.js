@@ -239,6 +239,11 @@
 				if (BigVideo.settings.forceAutoplay) {
 					$('body').on('click', setUpAutoPlay);
 				}
+
+				$('.big-video-vid_flash_api')
+					.attr('scale','noborder')
+					.attr('width','100%')
+					.attr('height','100%');
 				
 				// set events
 				$(window).resize(function() {
