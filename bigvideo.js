@@ -12,7 +12,7 @@
     $.BigVideo = function(options) {
 
         var defaults = {
-			// If you want to use a single mp4 source, set this to true
+			// If you want to use a single mp4 source, set as true
 			useFlashForFirefox:true,
 			// If you are doing a playlist, the video won't play the first time
 			// on a touchscreen unless the play event is attached to a user click
@@ -40,7 +40,7 @@
 
         BigVideo.settings = $.extend({}, defaults, options);
 
-        // If only using mp4s and browser is firefox, use flash fallback
+        // If only using mp4s and on firefox, use flash fallback
         var ua = navigator.userAgent.toLowerCase();
         var isFirefox = ua.indexOf('firefox') != -1;
         if (BigVideo.settings.useFlashForFirefox && (isFirefox)) {
