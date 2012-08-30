@@ -61,7 +61,7 @@
 					$(vidEl)
 						.css('top',0)
 						.css('left',-(windowH*mediaAspect-windowW)/2)
-						.css('height','windowH');
+						.css('height',windowH);
 					$(vidEl+'_html5_api').css('width',windowH*mediaAspect);
 					$(vidEl+'_flash_api')
 						.css('width',windowH*mediaAspect)
