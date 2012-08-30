@@ -60,12 +60,10 @@
 						.height(windowH);
 					$(vidEl)
 						.css('top',0)
-						.css('left',-(windowH*mediaAspect-windowW)/2);
-					$(vidEl+'_html5_api')
-						.css('width',windowH*mediaAspect);
-					$(vidEl+'_flash_api')
-						.css('width',windowH*mediaAspect)
+						.css('left',-(windowH*mediaAspect-windowW)/2)
 						.css('height','100%');
+					$(vidEl+'_html5_api').css('width',windowH*mediaAspect);
+					$(vidEl+'_flash_api').css('width',windowH*mediaAspect);
 				} else {
 					// is image
 					$('#big-video-image')
@@ -82,11 +80,10 @@
 						.height(windowW/mediaAspect);
 					$(vidEl)
 						.css('top',-(windowW/mediaAspect-windowH)/2)
-						.css('left',0);
-					$(vidEl+'_html5_api').css('width','100%');
-					$(vidEl+'_flash_api')
-						.css('width','100%')
+						.css('left',0)
 						.css('height',windowW/mediaAspect);
+					$(vidEl+'_html5_api').css('width','100%');
+					$(vidEl+'_flash_api').css('width','100%');
 				} else {
 					// is image
 					$('#big-video-image')
