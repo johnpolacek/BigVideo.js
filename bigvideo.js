@@ -61,9 +61,11 @@
 					$(vidEl)
 						.css('top',0)
 						.css('left',-(windowH*mediaAspect-windowW)/2)
-						.css('height','100%');
+						.css('height','windowH');
 					$(vidEl+'_html5_api').css('width',windowH*mediaAspect);
-					$(vidEl+'_flash_api').css('width',windowH*mediaAspect);
+					$(vidEl+'_flash_api')
+						.css('width',windowH*mediaAspect)
+						.css('height',windowH);
 				} else {
 					// is image
 					$('#big-video-image')
@@ -83,7 +85,9 @@
 						.css('left',0)
 						.css('height',windowW/mediaAspect);
 					$(vidEl+'_html5_api').css('width','100%');
-					$(vidEl+'_flash_api').css('width','100%');
+					$(vidEl+'_flash_api')
+						.css('width',windowW)
+						.css('width',windowW/mediaAspect);
 				} else {
 					// is image
 					$('#big-video-image')
