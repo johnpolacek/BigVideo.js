@@ -65,7 +65,7 @@
 					$(vidEl+'_html5_api').css('width',windowH*mediaAspect);
 					$(vidEl+'_flash_api')
 						.css('width',windowH*mediaAspect)
-						.css('height',windowH+'px !important');
+						.css('height',windowH);
 				} else {
 					// is image
 					$('#big-video-image')
@@ -87,7 +87,7 @@
 					$(vidEl+'_html5_api').css('width','100%');
 					$(vidEl+'_flash_api')
 						.css('width',windowW)
-						.css('height',windowW/mediaAspect+'px !important');
+						.css('height',windowW/mediaAspect);
 				} else {
 					// is image
 					$('#big-video-image')
@@ -240,7 +240,7 @@
 					$('body').on('click', setUpAutoPlay);
 				}
 
-				$('.big-video-vid_flash_api')
+				$('#big-video-vid_flash_api')
 					.attr('scale','noborder')
 					.attr('width','100%')
 					.attr('height','100%');
