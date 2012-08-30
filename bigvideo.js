@@ -65,7 +65,7 @@
 					$(vidEl+'_html5_api').css('width',windowH*mediaAspect);
 					$(vidEl+'_flash_api')
 						.css('width',windowH*mediaAspect)
-						.css('height',windowH);
+						.css('height',windowH+'px !important;');
 				} else {
 					// is image
 					$('#big-video-image')
@@ -87,7 +87,7 @@
 					$(vidEl+'_html5_api').css('width','100%');
 					$(vidEl+'_flash_api')
 						.css('width',windowW)
-						.css('width',windowW/mediaAspect);
+						.css('height',windowW/mediaAspect+'px !important;');
 				} else {
 					// is image
 					$('#big-video-image')
