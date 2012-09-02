@@ -196,6 +196,8 @@
 				player.volume(defaultVolume);
 				doLoop = false;
 			}
+			$('#big-video-image').css('display','none');
+			$(vidEl).css('display','block');
         }
 
         function showPoster(source) {
