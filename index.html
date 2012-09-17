@@ -59,12 +59,12 @@ $(function() {
     BV.init();
     BV.show('http://video-js.zencoder.com/oceans-clip.mp4');
 });</pre></blockquote></p>
-            <p>For best results in Firefox, create an Ogg version of your video and configure BigVideo.js like this:</p>
+            <p>For best results in Firefox, create an Ogg version of your video and configure BigVideo.js like this (works for WebM also):</p>
 <p><blockquote><pre>
 $(function() {
     var BV = new $.BigVideo({useFlashForFirefox:false});
     BV.init();
-    BV.show('vids/river.mp4', {ogg:'vids/river.ogv'});
+    BV.show('vids/river.mp4', {altSource:'vids/river.ogv'});
 });</pre></blockquote></p>
         </div>
 

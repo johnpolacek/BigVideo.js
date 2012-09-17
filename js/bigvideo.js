@@ -287,8 +287,8 @@
 				if (ext === 'jpg' || ext === 'gif' || ext === 'png') {
 					showPoster(source);
 				} else {
-					if (options !== undefined && options.ogg && navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
-						source = options.ogg;
+					if (options !== undefined && options.altSource && navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+						source = options.altSource;
 					}
 					playVideo(source);
 					isQueued = false;
