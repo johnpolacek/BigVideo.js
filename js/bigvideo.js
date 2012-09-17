@@ -287,6 +287,9 @@
 				if (ext === 'jpg' || ext === 'gif' || ext === 'png') {
 					showPoster(source);
 				} else {
+					if (options !== undefined && options.ogg && navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+						source = options.ogg;
+					}
 					playVideo(source);
 					isQueued = false;
 				}
