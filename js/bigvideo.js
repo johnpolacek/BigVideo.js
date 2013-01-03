@@ -17,7 +17,8 @@
 			// If you are doing a playlist, the video won't play the first time
 			// on a touchscreen unless the play event is attached to a user click
 			forceAutoplay:false,
-			controls:true
+			controls:true,
+			doLoop:false
         };
 
         var BigVideo = this,
@@ -33,17 +34,16 @@
 			isPlaying = false,
 			isQueued = false,
 			isAmbient = false,
-			doLoop = false,
 			playlist = [],
 			currMediaIndex,
 			currMediaType;
 
-        BigVideo.settings = $.extend({}, defaults, options);
+        var settings = $.extend({}, defaults, options);
 
         // If only using mp4s and on firefox, use flash fallback
         var ua = navigator.userAgent.toLowerCase();
         var isFirefox = ua.indexOf('firefox') != -1;
-        if (BigVideo.settings.useFlashForFirefox && (isFirefox)) {
+        if (settings.useFlashForFirefox && (isFirefox)) {
 			VideoJS.options.techOrder = ['flash'];
 		}
 
@@ -224,21 +224,21 @@
 			if (!isInitialized) {
 				// create player
 				$('body').prepend(wrap);
-				var autoPlayString = BigVideo.settings.forceAutoplay ? 'autoplay' : '';
+				var autoPlayString = settings.forceAutoplay ? 'autoplay' : '';
 				player = $('<video id="'+vidEl.substr(1)+'" class="video-js vjs-default-skin" preload="auto" data-setup="{}" '+autoPlayString+' webkit-playsinline></video>');
 				player.css('position','absolute');
 				wrap.append(player);
 				player = _V_(vidEl.substr(1), { 'controls': false, 'autoplay': true, 'preload': 'auto' });
 				
 				// add controls
-				if (BigVideo.settings.controls) initPlayControl();
+				if (settings.controls) initPlayControl();
 				
 				// set initial state
 				updateSize();
 				isInitialized = true;
 				isPlaying = false;
 
-				if (BigVideo.settings.forceAutoplay) {
+				if (settings.forceAutoplay) {
 					$('body').on('click', setUpAutoPlay);
 				}
 
@@ -269,7 +269,7 @@
 				});
 				
 				player.addEvent('ended', function() {
-					if (doLoop) {
+					if (settings.doLoop) {
 						player.currentTime(0);
 						player.play();
 					}
@@ -282,6 +282,7 @@
 
         BigVideo.show = function(source,options) {
 			isAmbient = (options !== undefined && options.ambient === true);
+			if (isAmbient || options.doLoop) settings.doLoop = true;
 			if (typeof(source) === 'string') {
 				var ext = source.substring(source.lastIndexOf('.')+1);
 				if (ext === 'jpg' || ext === 'gif' || ext === 'png') {
