@@ -37,7 +37,7 @@
 	    $(function() {
             var BV = new $.BigVideo();
 			BV.init();
-            if (Modernizr.touch) {
+            if (Modernizr.touch || true) {
                 BV.show('img/background-dock.jpg');
             } else {
                 BV.show('vids/dock.mp4',{ambient:true});

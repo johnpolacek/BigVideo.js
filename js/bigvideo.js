@@ -281,8 +281,8 @@
         };
 
         BigVideo.show = function(source,options) {
-			isAmbient = (options !== undefined && options.ambient === true);
-			if (isAmbient || options.doLoop) settings.doLoop = true;
+			isAmbient = (typeof options !== undefined && options.ambient === true);
+			if (typeof options.doLoop !== undefined) settings.doLoop = isAmbient || options.doLoop;
 			if (typeof(source) === 'string') {
 				var ext = source.substring(source.lastIndexOf('.')+1);
 				if (ext === 'jpg' || ext === 'gif' || ext === 'png') {
