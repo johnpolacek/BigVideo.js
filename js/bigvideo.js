@@ -281,14 +281,15 @@
         };
 
         BigVideo.show = function(source,options) {
-			isAmbient = (typeof options !== undefined && options.ambient === true);
-			if (typeof options.doLoop !== undefined) settings.doLoop = isAmbient || options.doLoop;
+        	if (options === undefined) options = {};
+			isAmbient = options.ambient === true;
+			if (isAmbient || options.doLoop) settings.doLoop = true;
 			if (typeof(source) === 'string') {
 				var ext = source.substring(source.lastIndexOf('.')+1);
 				if (ext === 'jpg' || ext === 'gif' || ext === 'png') {
 					showPoster(source);
 				} else {
-					if (options !== undefined && options.altSource && navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+					if (options.altSource && navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
 						source = options.altSource;
 					}
 					playVideo(source);
