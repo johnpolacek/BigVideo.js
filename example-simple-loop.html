@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>BigVideo.js - The jQuery Plugin for Big Background Video</title>
+    <meta name="description" content="BigVideo.js - The jQuery Plugin for Big Background Video" />
+    <meta name="author" content="John Polacek" />
+    <meta name="viewport" content="width=device-width">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:900&text=ABCDEFGHIJKLMNOPQRSTUVWXYZ' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bigvideo.css">
+</head>
+<body>
+    <!-- BigVideo Dependencies -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  	<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+    <script src="js/jquery-ui-1.8.22.custom.min.js"></script>
+    <script src="js/jquery.imagesloaded.min.js"></script>
+    <script src="http://vjs.zencdn.net/c/video.js"></script>
+
+    <!-- BigVideo -->
+    <script src="js/bigvideo.js"></script>
+
+    <!-- Demo -->
+    <script>
+	    $(function() {
+            var BV = new $.BigVideo();
+			BV.init();
+			BV.show('http://video-js.zencoder.com/oceans-clip.mp4',{doLoop:true});
+	    });
+    </script>
+</body>
+</html>
