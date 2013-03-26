@@ -307,6 +307,11 @@
         BigVideo.getPlayer = function() {
 			return player;
         };
+        
+        // Expose BigVideoJS player actions (like 'play', 'pause' and so on)
+        BigVideo.triggerPlayer = function(action){
+        	playControl(action);
+        };
     };
 
 })(jQuery);
