@@ -69,10 +69,12 @@
 				} else {
 					// is image
 					$('#big-video-image')
-						.width(windowH*mediaAspect)
-						.height(windowH)
-						.css('top',0)
-						.css('left',-(windowH*mediaAspect-windowW)/2);
+						.css({
+							width: 'auto',
+							height: windowH,
+							top:0,
+							left:-(windowH*mediaAspect-windowW)/2
+						});
 				}
 			} else {
 				// wider
@@ -91,10 +93,12 @@
 				} else {
 					// is image
 					$('#big-video-image')
-						.width(windowW)
-						.height(windowW/mediaAspect)
-						.css('top',-(windowW/mediaAspect-windowH)/2)
-						.css('left',0);
+						.css({
+							width: windowW,
+							height: 'auto',
+							top:-(windowW/mediaAspect-windowH)/2,
+							left:0
+						});
 				}
 			}
 		}
@@ -229,10 +233,10 @@
 				player.css('position','absolute');
 				wrap.append(player);
 				player = _V_(vidEl.substr(1), { 'controls': false, 'autoplay': true, 'preload': 'auto' });
-				
+
 				// add controls
 				if (settings.controls) initPlayControl();
-				
+
 				// set initial state
 				updateSize();
 				isInitialized = true;
@@ -246,7 +250,7 @@
 					.attr('scale','noborder')
 					.attr('width','100%')
 					.attr('height','100%');
-				
+
 				// set events
 				$(window).resize(function() {
 					updateSize();
@@ -267,7 +271,7 @@
 					if (durSeconds < 10) durSeconds='0'+durSeconds;
 					vidDur = durMinutes+':'+durSeconds;
 				});
-				
+
 				player.addEvent('ended', function() {
 					if (settings.doLoop) {
 						player.currentTime(0);
@@ -281,7 +285,7 @@
         };
 
         BigVideo.show = function(source,options) {
-        	if (options === undefined) options = {};
+			if (options === undefined) options = {};
 			isAmbient = options.ambient === true;
 			if (isAmbient || options.doLoop) settings.doLoop = true;
 			if (typeof(source) === 'string') {
@@ -307,10 +311,10 @@
         BigVideo.getPlayer = function() {
 			return player;
         };
-        
+
         // Expose BigVideoJS player actions (like 'play', 'pause' and so on)
         BigVideo.triggerPlayer = function(action){
-        	playControl(action);
+			playControl(action);
         };
     };
 
