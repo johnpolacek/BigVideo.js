@@ -145,7 +145,7 @@
 				e.preventDefault();
 				playControl('toggle');
 			});
-			player.addEvent('timeupdate', function() {
+			player.on('timeupdate', function() {
 				if (!isSeeking && (player.currentTime()/player.duration())) {
 					var currTime = player.currentTime();
 					var minutes = Math.floor(currTime/60);
@@ -256,7 +256,7 @@
 					updateSize();
 				});
 
-				player.addEvent('loadedmetadata', function(data) {
+				player.on('loadedmetadata', function(data) {
 					if (document.getElementById('big-video-vid_flash_api')) {
 						// use flash callback to get mediaAspect ratio
 						mediaAspect = document.getElementById('big-video-vid_flash_api').vjs_getProperty('videoWidth')/document.getElementById('big-video-vid_flash_api').vjs_getProperty('videoHeight');
@@ -272,7 +272,7 @@
 					vidDur = durMinutes+':'+durSeconds;
 				});
 
-				player.addEvent('ended', function() {
+				player.on('ended', function() {
 					if (settings.doLoop) {
 						player.currentTime(0);
 						player.play();
