@@ -193,11 +193,15 @@
 			isPlaying = true;
 			if (isAmbient) {
 				$('#big-video-control-container').css('display','none');
-				player.volume(0);
+				player.ready(function(){
+					player.volume(0);
+				});
 				doLoop = true;
 			} else {
 				$('#big-video-control-container').css('display','block');
-				player.volume(defaultVolume);
+				player.ready(function(){
+					player.volume(defaultVolume);
+				});
 				doLoop = false;
 			}
 			$('#big-video-image').css('display','none');
