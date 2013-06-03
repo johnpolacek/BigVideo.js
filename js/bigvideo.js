@@ -18,11 +18,11 @@
 			// on a touchscreen unless the play event is attached to a user click
 			forceAutoplay:false,
 			controls:true,
-			doLoop:false
+			doLoop:false,
+			container:$('body')
         };
 
         var BigVideo = this,
-        		container = $('body'),
 			player,
 			vidEl = '#big-video-vid',
 			wrap = $('<div id="big-video-wrap"></div>'),
