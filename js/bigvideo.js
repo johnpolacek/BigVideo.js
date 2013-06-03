@@ -22,6 +22,7 @@
         };
 
         var BigVideo = this,
+        		container = $('body'),
 			player,
 			vidEl = '#big-video-vid',
 			wrap = $('<div id="big-video-wrap"></div>'),
@@ -119,7 +120,7 @@
 			markup += '<div id="big-video-control-timer"></div>';
 			markup += '</div>';
 			markup += '</div>';
-			$('body').append(markup);
+			settings.container.append(markup);
 
 			// hide until playVideo
 			$('#big-video-control-container').css('display','none');
@@ -176,7 +177,7 @@
 
 		function setUpAutoPlay() {
 			player.play();
-			$('body').off('click',setUpAutoPlay);
+			settings.container.off('click',setUpAutoPlay);
         }
 
 		function nextMedia() {
@@ -227,7 +228,7 @@
 		BigVideo.init = function() {
 			if (!isInitialized) {
 				// create player
-				$('body').prepend(wrap);
+				settings.container.prepend(wrap);
 				var autoPlayString = settings.forceAutoplay ? 'autoplay' : '';
 				player = $('<video id="'+vidEl.substr(1)+'" class="video-js vjs-default-skin" preload="auto" data-setup="{}" '+autoPlayString+' webkit-playsinline></video>');
 				player.css('position','absolute');
