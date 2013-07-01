@@ -41,15 +41,7 @@
 
         var settings = $.extend({}, defaults, options);
 
-        // If only using mp4s and on firefox, use flash fallback
-        var ua = navigator.userAgent.toLowerCase();
-        var isFirefox = ua.indexOf('firefox') != -1;
-        if (settings.useFlashForFirefox && (isFirefox)) {
-			VideoJS.options.techOrder = ['flash'];
-		}
-
-
-		function updateSize() {
+        function updateSize() {
 			var windowW = $(window).width();
 			var windowH = $(window).height();
 			var windowAspect = windowW/windowH;
@@ -187,6 +179,7 @@
         }
 
         function playVideo(source) {
+
 			// clear image
 			$(vidEl).css('display','block');
 			currMediaType = 'video';
@@ -237,7 +230,20 @@
 				player = $('<video id="'+vidEl.substr(1)+'" class="video-js vjs-default-skin" preload="auto" data-setup="{}" '+autoPlayString+' webkit-playsinline></video>');
 				player.css('position','absolute');
 				wrap.append(player);
-				player = _V_(vidEl.substr(1), { 'controls': false, 'autoplay': true, 'preload': 'auto' });
+
+				var videoTechOrder = ['html5','flash'];
+				// If only using mp4s and on firefox, use flash fallback
+				var ua = navigator.userAgent.toLowerCase();
+				var isFirefox = ua.indexOf('firefox') != -1;
+				if (settings.useFlashForFirefox && (isFirefox)) {
+					videoTechOrder = ['flash', 'html5'];
+				}
+				player = videojs(vidEl.substr(1), { 
+					controls:false, 
+					autoplay:true, 
+					preload:'auto', 
+					techOrder:videoTechOrder
+				});
 
 				// add controls
 				if (settings.controls) initPlayControl();
