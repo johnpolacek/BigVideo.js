@@ -34,6 +34,7 @@ pre {
 .nav { 
 	position:fixed; 
 	top:50px;left:50px;
+	z-index: 999999;
 	width:150px; 
 	-webkit-transition-duration:0.6s;-moz-transition-duration:0.6s;-ms-transition-duration:0.6s;-o-transition-duration:0.6s;transition-duration:0.6s;
 }
