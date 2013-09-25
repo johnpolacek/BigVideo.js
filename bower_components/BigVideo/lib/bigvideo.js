@@ -20,7 +20,7 @@
     } else {
         factory(jQuery, videojs);
     }
-}(function($, videojs) {
+})(function($, videojs) {
 
   $.BigVideo = function(options) {
 
