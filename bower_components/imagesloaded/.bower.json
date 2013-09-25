@@ -1,0 +1,24 @@
+{
+  "name": "imagesloaded",
+  "version": "3.0.4",
+  "description": "JavaScript is all like _You images done yet or what?_",
+  "main": "imagesloaded.js",
+  "dependencies": {
+    "eventEmitter": "4.x",
+    "eventie": "desandro/eventie#>=1.0.3"
+  },
+  "devDependencies": {
+    "jquery": ">=1.9 <2.0",
+    "qunit": ">=1.10"
+  },
+  "homepage": "https://github.com/desandro/imagesloaded",
+  "_release": "3.0.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.0.4",
+    "commit": "51efecb73f8b0cd839024bfa7985339dec6bc729"
+  },
+  "_source": "git://github.com/desandro/imagesloaded.git",
+  "_target": ">=2.1.1",
+  "_originalSource": "imagesloaded"
+}

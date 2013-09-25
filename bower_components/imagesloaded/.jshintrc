@@ -1,0 +1,18 @@
+{
+  "browser": true,
+  "curly": true,
+  "newcap": false,
+  "strict": true,
+  "undef": true,
+  "unused": true,
+  "predef": {
+    "define": false,
+
+    "imagesLoaded": false,
+    "test": false,
+    "ok": false,
+    "equal": false,
+    "start": false,
+    "stop": false
+  }
+}

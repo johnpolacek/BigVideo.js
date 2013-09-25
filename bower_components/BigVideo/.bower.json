@@ -1,0 +1,37 @@
+{
+  "name": "BigVideo",
+  "homepage": "http://dfcb.github.com/BigVideo.js/",
+  "authors": [
+    "John Polacek <john@johnpolacek.com>"
+  ],
+  "description": "The jQuery Plugin for Big Background Video (and Images)",
+  "main": "lib/bigvideo.js",
+  "keywords": [
+    "video",
+    "background"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">=1.7.2",
+    "jquery-ui": ">=1.8.22",
+    "video.js": ">=3.2.0",
+    "imagesloaded": ">=2.1.1"
+  },
+  "_release": "bower",
+  "_resolution": {
+    "type": "branch",
+    "branch": "bower",
+    "commit": "ae6ea90a76a620297d2fe8246653d1b5fc924e67"
+  },
+  "_source": "/Users/matt/Documents/BigVideo.js",
+  "_target": "bower",
+  "_originalSource": "../BigVideo.js",
+  "_direct": true
+}

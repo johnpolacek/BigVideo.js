@@ -1,0 +1,16 @@
+{
+  "name": "eventie",
+  "version": "1.0.3",
+  "main": "eventie.js",
+  "description": "event binding helper",
+  "homepage": "https://github.com/desandro/eventie",
+  "_release": "1.0.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.3",
+    "commit": "1f43e215030d7b39be02311b49734d530ab85650"
+  },
+  "_source": "git://github.com/desandro/eventie.git",
+  "_target": ">=1.0.3",
+  "_originalSource": "desandro/eventie"
+}

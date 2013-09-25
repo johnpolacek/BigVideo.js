@@ -1,0 +1,18 @@
+{
+  "name": "video.js",
+  "description": "An HTML5 and Flash video player with a common API and skin for both.",
+  "version": "4.1.0",
+  "copyright": "Copyright 2013 Brightcove, Inc. https://github.com/videojs/video.js/blob/master/LICENSE",
+  "keywords": [
+    "html5",
+    "flash",
+    "video",
+    "player"
+  ],
+  "homepage": "http://videojs.com",
+  "author": "Steve Heffernan",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/videojs/video.js-component.git"
+  }
+}

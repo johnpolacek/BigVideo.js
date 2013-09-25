@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>eventie test</title>
+<style>
+html, body { height: 100%; }
+
+body { font-family: sans-serif; }
+
+#output {
+  font-size: 12px;
+  border: 1px solid;
+}
+</style>
+
+<script src="eventie.js"></script>
+<script>
+( function() {
+
+var output;
+
+function addText( message ) {
+  output.innerHTML += '\<br\>' + message;
+}
+
+function Handler() {
+  this.firstName = 'Ralph';
+}
+
+Handler.prototype.handleEvent = function( event ) {
+  addText( this.firstName + ' handler on ' + event.type + ' at ' + (new Date()).getTime() );
+};
+
+function onClick1() {
+  addText('click 1 on ' + this.nodeName + ' at ' + (new Date()).getTime() );
+}
+
+window.onload = function() {
+  output = document.getElementById('output');
+  var hndlr = new Handler();
+    
+  eventie.bind( document.body, 'click', onClick1 );
+  eventie.bind( document.body, 'click', hndlr );
+  eventie.bind( document.getElementById('turn-off'), 'click', function() {
+    eventie.unbind( document.body, 'click', onClick1 );  
+  }, false );
+
+  function onResize() {
+    console.log('resize');
+  }
+
+  eventie.bind( window, 'resize', onResize );
+  eventie.unbind( window, 'resize', onResize );
+
+};
+
+})();
+</script>
+
+</head>
+<body>
+
+  <h1>eventie test</h1>
+
+  <button id="turn-off">Turn off click1 </button>
+  <div id="output"></div>
+
+</body>
+</html>
