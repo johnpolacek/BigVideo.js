@@ -31,8 +31,10 @@ require(['path/to/bigvideo'], function(bigvideo) {
 It expects its dependencies to have the module names ``jquery``,``video.js``, ``imagesloaded`` and ``jquery-ui``, so make sure your [require config](http://requirejs.org/docs/api.html#config) is set up correctly.
 
 * * *
-### Created by John Polacek <small>(follow [@johnpolacek](https://twitter.com/johnpolacek))</small> at Draftfcb Chicago
-### Thanks to [Matt Brennan](https://github.com/quarterto) for Bower integration
+### Created by John Polacek 
+Follow [@johnpolacek](https://twitter.com/johnpolacek) on Twitter
+
+Thanks to [Matt Brennan](https://github.com/quarterto) for Bower integration
 
 * * *
 ### Draftfcb Chicago
