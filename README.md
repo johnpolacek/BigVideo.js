@@ -7,7 +7,7 @@ Find out everything you need to know about how to use this plugin on its demo pa
 If you're using [Bower](http://bower.io) (and you should be!) installing BigVideo and its dependencies is simply:
 
 ```
-bower install BigVideo
+bower install BigVideo.js
 ```
 
 This downloads and installs BigVideo to the ``bower_components`` folder. Add to your page the usual way with script tags, or using [RequireJS](#requirejs).
@@ -32,6 +32,7 @@ It expects its dependencies to have the module names ``jquery``,``video.js``, ``
 
 * * *
 ### Created by John Polacek <small>(follow [@johnpolacek](https://twitter.com/johnpolacek))</small> at Draftfcb Chicago
+### Thanks to [Matt Brennan](https://github.com/quarterto) for Bower integration
 
 * * *
 ### Draftfcb Chicago
