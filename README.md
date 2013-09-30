@@ -32,17 +32,22 @@ Make sure your [require config](http://requirejs.org/docs/api.html#config) is se
 
 ```javascript
 require.config({
-	"BigVideo": "bower_components/BigVideo.js/lib/bigvideo",
-	"jquery": "bower_components/jquery/jquery",
-	"jquery-ui": "bower_components/jquery-ui/ui/jquery-ui",
-	"videojs": "bower_components/video.js/video",
-	"imagesloaded": "bower_components/imagesloaded/imagesloaded"
-	"eventEmitter/EventEmitter": "bower_components/eventEmitter/EventEmitter",
-	"eventie/eventie": "bower_components/eventie/eventie"
+	paths: {
+		"BigVideo": "bower_components/BigVideo.js/lib/bigvideo",
+		"jquery": "bower_components/jquery/jquery",
+		"jquery-ui": "bower_components/jquery-ui/ui/jquery-ui",
+		"videojs": "bower_components/video.js/video",
+		"imagesloaded": "bower_components/imagesloaded/imagesloaded"
+		"eventEmitter/EventEmitter": "bower_components/eventEmitter/EventEmitter",
+		"eventie/eventie": "bower_components/eventie/eventie"
+	},
+	shim: {
+		"videojs": {exports: 'videojs'}
+	}
 });
 ```
 
-This is to ensure that BigVideo and all its dependencies get the right paths.
+This is to ensure that BigVideo and all its dependencies get the right paths, and that RequireJS knows how to reference Video.js.
 
 * * *
 ### Created by John Polacek 
