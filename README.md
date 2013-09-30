@@ -28,7 +28,26 @@ require(['path/to/bigvideo'], function(bigvideo) {
 });
 ```
 
-It expects its dependencies to have the module names ``jquery``,``video.js``, ``imagesloaded`` and ``jquery-ui``, so make sure your [require config](http://requirejs.org/docs/api.html#config) is set up correctly.
+Make sure your [require config](http://requirejs.org/docs/api.html#config) is set up correctly; an example configuration is as follows:
+
+```javascript
+require.config({
+	paths: {
+		"BigVideo": "bower_components/BigVideo.js/lib/bigvideo",
+		"jquery": "bower_components/jquery/jquery",
+		"jquery-ui": "bower_components/jquery-ui/ui/jquery-ui",
+		"videojs": "bower_components/video.js/video",
+		"imagesloaded": "bower_components/imagesloaded/imagesloaded"
+		"eventEmitter/EventEmitter": "bower_components/eventEmitter/EventEmitter",
+		"eventie/eventie": "bower_components/eventie/eventie"
+	},
+	shim: {
+		"videojs": {exports: 'videojs'}
+	}
+});
+```
+
+This is to ensure that BigVideo and all its dependencies get the right paths, and that RequireJS knows how to reference Video.js.
 
 * * *
 ### Created by John Polacek 
