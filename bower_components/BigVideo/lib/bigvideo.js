@@ -338,9 +338,11 @@
 			return player;
 		};
 
-		BigVideo.dispose = function() {
+		// Remove/dispose the player
+		BigVideo.remove = BigVideo.dispose = function() {
 			isInitialized = false;
 
+			wrap.remove();
 			$(window).off('resize.bigvideo');
 
 			if(player) {
@@ -354,14 +356,7 @@
 		BigVideo.triggerPlayer = function(action){
 			playControl(action);
 		};
-		
-		// Remove the player
-		BigVideo.remove = function() {
-			wrap.remove();
-			
-			// remove the resize event
-			$(window).off("resize", updateSize);
-        };
+
 	};
 
 });

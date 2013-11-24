@@ -63,7 +63,7 @@
 $(function() {
     var BV = new $.BigVideo();
     BV.init();
-    BV.show('http://video-js.zencoder.com/oceans-clip.mp4');
+    BV.show('http://vjs.zencdn.net/v/oceans.mp4');
 });</pre></blockquote></p>
             <p>For best results in Firefox, create an Ogg version of your video and configure BigVideo.js as below or in <a href="example-ogg.html" target="_blank">this example</a>. <small>(note: works for WebM also)</small></p>
 <p><blockquote><pre>
@@ -82,7 +82,7 @@ $(function() {
 $(function() {
     var BV = new $.BigVideo();
     BV.init();
-    BV.show('http://video-js.zencoder.com/oceans-clip.mp4',{ambient:true});
+    BV.show('http://vjs.zencdn.net/v/oceans.mp4',{ambient:true});
 });</pre></blockquote></p>
             <p>Or play a series of ambient background videos (like in <a href="example-ambient-loop.html" target="_blank">this example</a>)</p>
             <p><blockquote><pre>
@@ -152,7 +152,7 @@ BV.getPlayer().pause();</pre></blockquote></p>
             // initialize BigVideo
             BV = new $.BigVideo();
 			BV.init();
-			BV.show('http://video-js.zencoder.com/oceans-clip.mp4',{ambient:true});
+			BV.show('http://vjs.zencdn.net/v/oceans.mp4',{ambient:true});
 
             // Playlist button click starts video
             $('.playlist-btn').on('click', function(e) {
