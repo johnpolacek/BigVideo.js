@@ -1,7 +1,7 @@
 /*
 	BigVideo - The jQuery Plugin for Big Background Video (and Images)
 	by John Polacek (@johnpolacek)
-	
+
 	Dual licensed under MIT and GPL.
 
 	Dependencies: jQuery, jQuery UI (Slider), Video.js, ImagesLoaded
@@ -30,9 +30,10 @@
 			// If you are doing a playlist, the video won't play the first time
 			// on a touchscreen unless the play event is attached to a user click
 			forceAutoplay:false,
-			controls:true,
+			controls:false,
 			doLoop:false,
-			container:$('body')
+			container:$('body'),
+			shrinkable:false
 		};
 
 		var BigVideo = this,
@@ -55,20 +56,30 @@
 		var settings = $.extend({}, defaults, options);
 
 		function updateSize() {
-			var windowW = $(window).width();
-			var windowH = $(window).height();
+			var windowW = settings.container.width();
+			var windowH = settings.container.height();
 			var windowAspect = windowW/windowH;
+
 			if (windowAspect < mediaAspect) {
 				// taller
 				if (currMediaType === 'video') {
 					player
 						.width(windowH*mediaAspect)
 						.height(windowH);
-					$(vidEl)
-						.css('top',0)
-						.css('left',-(windowH*mediaAspect-windowW)/2)
+					if (!settings.shrinkable) {
+						$(vidEl)
+							.css('top',0)
+							.css('left',-(windowH*mediaAspect-windowW)/2)
+							.css('height',windowH);
+					} else {
+						$(vidEl)
+							.css('top',-(windowW/mediaAspect-windowH)/2)
+							.css('left',0)
+							.css('height',windowW/mediaAspect);
+					}
+					$(vidEl+'_html5_api')
+						.css('width',windowH*mediaAspect)
 						.css('height',windowH);
-					$(vidEl+'_html5_api').css('width',windowH*mediaAspect);
 					$(vidEl+'_flash_api')
 						.css('width',windowH*mediaAspect)
 						.css('height',windowH);
@@ -92,7 +103,7 @@
 						.css('top',-(windowW/mediaAspect-windowH)/2)
 						.css('left',0)
 						.css('height',windowW/mediaAspect);
-					$(vidEl+'_html5_api').css('width','100%');
+					$(vidEl+'_html5_api').css('width',$(vidEl+'_html5_api').parent().width()+"px");
 					$(vidEl+'_flash_api')
 						.css('width',windowW)
 						.css('height',windowW/mediaAspect);
@@ -129,6 +140,7 @@
 
 			// hide until playVideo
 			$('#big-video-control-container').css('display','none');
+			$('#big-video-control-timer').css('display','none');
 
 			// add events
 			$('#big-video-control-track').slider({
@@ -321,14 +333,14 @@
 						source = options.altSource;
 					}
 					playVideo(source);
-					options.onShown && options.onShown();
+					if (options.onShown) options.onShown();
 					isQueued = false;
 				}
 			} else {
 				playlist = source;
 				currMediaIndex = 0;
 				playVideo(playlist[currMediaIndex]);
-				options.onShown && options.onShown();
+				if (options.onShown) options.onShown();
 				isQueued = true;
 			}
 		};
