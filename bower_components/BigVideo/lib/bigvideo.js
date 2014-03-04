@@ -103,7 +103,9 @@
 						.css('top',-(windowW/mediaAspect-windowH)/2)
 						.css('left',0)
 						.css('height',windowW/mediaAspect);
-					$(vidEl+'_html5_api').css('width',$(vidEl+'_html5_api').parent().width()+"px");
+					$(vidEl+'_html5_api')
+						.css('width',$(vidEl+'_html5_api').parent().width()+"px")
+                        .css('height','auto');
 					$(vidEl+'_flash_api')
 						.css('width',windowW)
 						.css('height',windowW/mediaAspect);
