@@ -61,7 +61,7 @@
 			var windowAspect = windowW/windowH;
 
 			if (settings.container.is($('body'))) {
-				$('body').css('height',$(window).height() > $('body').css('height','auto').height() ? '100%' : 'auto');
+				$('html,body').css('height',$(window).height() > $('body').css('height','auto').height() ? '100%' : 'auto');
 			}
 
 			if (windowAspect < mediaAspect) {
