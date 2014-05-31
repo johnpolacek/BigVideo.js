@@ -33,7 +33,7 @@ Make sure your [require config](http://requirejs.org/docs/api.html#config) is se
 ```javascript
 require.config({
 	paths: {
-		"BigVideo": "bower_components/BigVideo.js/lib/bigvideo",
+		"BigVideo": "bower_components/BigVideo/lib/bigvideo",
 		"jquery": "bower_components/jquery/jquery",
 		"jquery-ui": "bower_components/jquery-ui/ui/jquery-ui",
 		"videojs": "bower_components/video.js/video",
