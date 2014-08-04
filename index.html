@@ -65,7 +65,7 @@ $(function() {
     BV.init();
     BV.show('http://vjs.zencdn.net/v/oceans.mp4');
 });</pre></blockquote></p>
-            <p>For best results in Firefox, create an Ogg version of your video and configure BigVideo.js as below or in <a href="example-ogg.html" target="_blank">this example</a>. <small>(note: works for WebM also)</small></p>
+            <p>For crossbrowser fallbacks, you can include a source order with different video formats. Refer to <a href="example-multiformats.html">this example</a>. <em><small>(Note: Safari does not fallback correctly for webm, so include mp4 first)</small></em></p>
 <p><blockquote><pre>
 $(function() {
     var BV = new $.BigVideo({useFlashForFirefox:false});
@@ -111,7 +111,7 @@ if (Modernizr.touch) {
                 <a href="vids/river.mp4" class="playlist-btn">Video #2</a>
                 <a href="vids/frontier.mp4" class="playlist-btn">Video #3</a>
             </div>
-            <p>For more on how to do this, including auto-hiding content and alternate fullscreen image content for touchscreen devices, take a look at <a href="example-playlist.html">this example</a>.
+            <p>For more on how to do this, including auto-hiding content and alternate fullscreen image content for touchscreen devices, take a look at <a href="example-playlist.html">this example</a> and <a href="example-multiformats-playlist.html">this example for multiple video formats</a>.
             <p><small>Playlist clips courtesy of <a href="http://beachfrontprod.blogspot.com/" target="_blank">Beachfront B-Roll</a></small></p>
         </div>
 
