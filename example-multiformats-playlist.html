@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:900&text=ABCDEFGHIJKLMNOPQRSTUVWXYZ' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bigvideo.css">
+    <link rel="stylesheet" href="bower_components/BigVideo/css/bigvideo.css">
 </head>
 <body>
     <!-- BigVideo Dependencies -->
@@ -27,7 +27,21 @@
 	    $(function() {
             var BV = new $.BigVideo({useFlashForFirefox:false});
 			BV.init();
-			BV.show('vids/river.mp4', {altSource:'vids/river.ogv'});
+            BV.showPlaylist([
+                { type: "video/mp4",  src: "vids/dock.mp4" },
+                { type: "video/webm", src: "vids/dock.webm" },
+                { type: "video/ogg",  src: "vids/dock.ogv" }
+            ],
+            [
+                { type: "video/mp4",  src: "vids/frontier.mp4" },
+                { type: "video/webm", src: "vids/frontier.webm" },
+                { type: "video/ogg",  src: "vids/frontier.ogv" }
+            ],
+            [
+                { type: "video/mp4",  src: "vids/river.mp4" },
+                { type: "video/webm", src: "vids/river.webm" },
+                { type: "video/ogg",  src: "vids/river.ogv" }
+            ]);
 	    });
     </script>
 </body>
