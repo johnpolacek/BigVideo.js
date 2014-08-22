@@ -32,8 +32,6 @@
     </div>
 
     <div class="main">
-        
-
         <div id="overview" class="box">
     		<h1>BigVideo<span class="dimmed"><small>.</small>js</span></h1>
     		<h2>The jQuery Plugin for Big Background Video (and Images)</h2>
@@ -54,7 +52,6 @@
             </p>
         </div>
 
-
         <div id="setup" class="box">
             <h2>Setup</h2>
             <p>BigVideo.js uses the Video.js api. It also requires jQuery, jQuery UI (for the slider control) and the <a href="https://github.com/desandro/imagesloaded" target="_blank">jQuery imagesloaded</a> plugin. If you installed using <a href="https://bower.io">Bower</a>, they'll have been installed automatically. Make sure you include all these libraries when using BigVideo.js.</p>
@@ -69,11 +66,14 @@ $(function() {
 <p><blockquote><pre>
 $(function() {
     var BV = new $.BigVideo({useFlashForFirefox:false});
-    BV.init();
-    BV.show('vids/river.mp4', {altSource:'vids/river.ogv'});
+	BV.init();
+    BV.show([
+        { type: "video/mp4",  src: "vids/river.mp4" },
+        { type: "video/webm", src: "vids/river.webm" },
+        { type: "video/ogg",  src: "vids/river.ogv" }
+    ]);
 });</pre></blockquote></p>
         </div>
-
 
         <div id="ambient" class="box">
             <h2>Ambient Video</h2>
@@ -102,7 +102,6 @@ if (Modernizr.touch) {
 }</pre></blockquote></p>
         </div>
         
-
         <div id="playlists" class="box">
             <h2>Playlists</h2>
             <p>You can create a playlist like this:</p>
