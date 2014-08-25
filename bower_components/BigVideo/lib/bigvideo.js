@@ -56,8 +56,8 @@
 		var settings = $.extend({}, defaults, options);
 
 		function updateSize() {
-			var containerW = settings.container.width() < $(window).width() ? settings.container.width() : $(window).width(),
-				containerH = settings.container.height() < $(window).height() ? settings.container.height() : $(window).height(),
+			var containerW = settings.container.outerWidth() < $(window).width() ? settings.container.outerWidth() : $(window).width(),
+				containerH = settings.container.outerHeight() < $(window).height() ? settings.container.outerHeight() : $(window).height(),
 				containerAspect = containerW/containerH;
 
 			if (settings.container.is($('body'))) {
