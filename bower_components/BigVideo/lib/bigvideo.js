@@ -36,7 +36,7 @@
 			shrinkable:false
 		};
 
-		var BigVideo = this,
+		var BigVideo = {},
 			player,
 			vidEl = '#big-video-vid',
 			wrap = $('<div id="big-video-wrap"></div>'),
@@ -261,7 +261,7 @@
 				// create player
 				settings.container.prepend(wrap);
 				var autoPlayString = settings.forceAutoplay ? 'autoplay' : '';
-				player = $('<video id="'+vidEl.substr(1)+'" class="video-js vjs-default-skin" preload="auto" data-setup="{}" '+autoPlayString+' webkit-playsinline></video>');
+				player = $('<video id="'+vidEl.substr(1)+'" class="video-js vjs-default-skin" height="1" width="1" preload="auto" data-setup="{}" '+autoPlayString+' webkit-playsinline></video>');
 				player.css('position','absolute');
 				wrap.append(player);
 
@@ -417,5 +417,7 @@
 			playControl(action);
 		};
 
+		return BigVideo;
+		
 	};
 });
