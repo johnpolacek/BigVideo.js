@@ -22,7 +22,7 @@ If you'd rather download things manually, you can grab the latest zip from that 
 ## Options
 The following are defaults on initialization:
 ``` js
-  var defaults = {
+    var BV = new $.BigVideo({
         // If you want to use a single mp4 source, set as true
         useFlashForFirefox:true,
         // If you are doing a playlist, the video won't play the first time
@@ -32,9 +32,9 @@ The following are defaults on initialization:
         doLoop:false,
         container:$('body'),
         shrinkable:false
-    };
+    });
 ```
-    
+
 ## RequireJS
 If [RequireJS](http://requirejs.org/) is detected, BigVideo.js defines itself as an anonymous module. Require it as:
 
