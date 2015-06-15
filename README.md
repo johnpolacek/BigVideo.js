@@ -14,10 +14,12 @@ This downloads and installs BigVideo to the ``bower_components`` folder. Add to 
 
 If you'd rather download things manually, you can grab the latest zip from that lovely button on the right ([or this link](https://github.com/dfcb/BigVideo.js/archive/master.zip)). You will also need the dependencies:
 
-* [jQuery 1.7.2 or higher](http://jquery.com/download)
-* [jQuery UI slider 1.8.22 or higher](http://jqueryui.com/download/#!components=1110000000000000100000000000000000)
 * [Video.js 3.2 or higher](http://www.videojs.com/)
-* [imagesloaded 2.1.1 or higher](http://desandro.github.io/imagesloaded/)
+* [jQuery 1.7.2 or higher](http://jquery.com/download)
+
+Additionally, if you are using image functionality:
+* [jQuery UI slider 1.8.22 or higher](http://jqueryui.com/download/#!components=1110000000000000100000000000000000)
+* [imagesloaded 2.1.1 or higher](http://desandro.github.io/imagesloaded/) 
 
 ## Options
 The following are defaults on initialization:
