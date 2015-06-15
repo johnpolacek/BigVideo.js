@@ -19,6 +19,22 @@ If you'd rather download things manually, you can grab the latest zip from that 
 * [Video.js 3.2 or higher](http://www.videojs.com/)
 * [imagesloaded 2.1.1 or higher](http://desandro.github.io/imagesloaded/)
 
+## Options
+The following are defaults on initialization:
+``` js
+    var BV = new $.BigVideo({
+        // If you want to use a single mp4 source, set as true
+        useFlashForFirefox:true,
+        // If you are doing a playlist, the video won't play the first time
+        // on a touchscreen unless the play event is attached to a user click
+        forceAutoplay:false,
+        controls:false,
+        doLoop:false,
+        container:$('body'),
+        shrinkable:false
+    });
+```
+
 ## RequireJS
 If [RequireJS](http://requirejs.org/) is detected, BigVideo.js defines itself as an anonymous module. Require it as:
 
