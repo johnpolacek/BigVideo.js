@@ -1,7 +1,16 @@
 # BigVideo.js
-## The jQuery Plugin for Big Background Video (and Images)
+####The jQuery Plugin for Big Background Video (and Images)
+Learn how to use this plugin on its demo page at <http://dfcb.github.com/BigVideo.js>.
 
-Find out everything you need to know about how to use this plugin on its demo page at <http://dfcb.github.com/BigVideo.js>.
+##12-30-2015 Update
+This project is no longer under active development. Much has changed since the summer of 2012 when BigVideo.js was launched. For more current information on implementing video backgrounds, check out these links:
+
+- CSS Tricks - [Should I use a video as a background?](https://css-tricks.com/should-i-use-a-video-as-a-background/)
+- Dudley Storey - [Create Fullscreen HTML5 Page Background Video](http://thenewcode.com/777/Create-Fullscreen-HTML5-Page-Background-Video)
+- [Vide](http://vodkabears.github.io/vide/) - Easy as hell jQuery plugin for video backgrounds
+
+If you are interested in taking over the project, ping me at <a href="https://twitter.com/johnpolacek">@johnpolacek</a></p>
+
 
 ## Installation
 If you're using [Bower](http://bower.io) (and you should be!) installing BigVideo and its dependencies is simply:
@@ -71,11 +80,6 @@ This is to ensure that BigVideo and all its dependencies get the right paths, an
 ### Created by John Polacek 
 Follow [@johnpolacek](https://twitter.com/johnpolacek) on Twitter
 
-Thanks to [Matt Brennan](https://github.com/quarterto) for Bower integration
-
-* * *
-### Draftfcb Chicago
-We are the development group at Draftfcb Chicago. If you want to work on big digital ideas for big brands, get in touch with us at [devrecruiting@draftfcb.com](mailto:devrecruiting@draftfcb.com).
 
 * * *
 The MIT License (MIT)
