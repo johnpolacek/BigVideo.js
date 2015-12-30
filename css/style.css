@@ -18,6 +18,8 @@ blockquote {
 	margin:0 0 20px;
 	padding:5px 20px; 
 }
+ul {color: #fff;}
+li {margin-bottom: 8px;}
 pre {
 	white-space:pre-wrap;       /* css-3 */
 	white-space:-moz-pre-wrap;  /* Mozilla, since 1999 */
@@ -96,6 +98,7 @@ pre {
 	border-radius:5px; 
 }
 .dimmed {opacity:.7;}
+.callout {background:#000;padding:16px;margin-bottom: 16px;}
 .footer-text {
 	padding:0 20px;
 	font-size:.9em;
