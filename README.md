@@ -1,8 +1,8 @@
 # BigVideo.js
 ####The jQuery Plugin for Big Background Video (and Images)
-Learn how to use this plugin on its demo page at <http://dfcb.github.com/BigVideo.js>.
+Learn how to use this plugin on its [demo page](http://johnpolacek.github.io/BigVideo.js/).
 
-##12-30-2015 Update
+## 12-30-2015 Update
 This project is no longer under active development. Much has changed since the summer of 2012 when BigVideo.js was launched. For more current information on implementing video backgrounds, check out these links:
 
 - CSS Tricks - [Should I use a video as a background?](https://css-tricks.com/should-i-use-a-video-as-a-background/)
@@ -21,7 +21,7 @@ bower install BigVideo.js
 
 This downloads and installs BigVideo to the ``bower_components`` folder. Add to your page the usual way with script tags, or using [RequireJS](#requirejs).
 
-If you'd rather download things manually, you can grab the latest zip from that lovely button on the right ([or this link](https://github.com/dfcb/BigVideo.js/archive/master.zip)). You will also need the dependencies:
+If you'd rather download things manually, you can grab the latest zip from that lovely button on the right ([or this link](https://github.com/johnpolacek/BigVideo.js/archive/master.zip)). You will also need the dependencies:
 
 * [Video.js 3.2 or higher](http://www.videojs.com/)
 * [jQuery 1.7.2 or higher](http://jquery.com/download)
